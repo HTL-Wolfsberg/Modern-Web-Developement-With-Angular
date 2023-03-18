@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     ButtonModule,
     RatingModule,
-    FormsModule
+    FormsModule,
+    ToastModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

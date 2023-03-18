@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { Product } from './models/product.model';
 import { ProductService } from './services/product.service';
 
@@ -12,7 +13,8 @@ export class AppComponent implements OnInit
   products: Product[] = [];
   shoppingCard:Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+    private messageService: MessageService) { }
 
   ngOnInit()
   {
@@ -25,6 +27,6 @@ export class AppComponent implements OnInit
   onBuyClicked(product: Product)
   {
     this.shoppingCard.push(product);
+    this.messageService.add({severity: "success", detail: product.name + " zum Einkaufswagen hinzugefügt"})
   }
-
 }
