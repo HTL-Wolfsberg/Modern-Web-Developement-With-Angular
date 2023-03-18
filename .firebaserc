@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "modernwebdevwithangular"
+  },
+  "targets": {
+    "modernwebdevwithangular": {
+      "hosting": {
+        "ModernWebDevelopementWithAngular": [
+          "modernwebdevwithangular"
+        ]
+      }
+    }
+  }
+}
