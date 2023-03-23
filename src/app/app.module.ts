@@ -13,6 +13,7 @@ import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
     RatingModule,
     FormsModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PanelModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
