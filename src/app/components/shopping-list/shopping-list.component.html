@@ -1,0 +1,28 @@
+<h1>Shopping List</h1>
+
+<p-toast position="bottom-center"></p-toast>
+
+<div class="cardContainer">
+  <p-card class="productCard" [style]="{'width':'22em', 'margin': '1em'}" *ngFor="let product of products">
+    <div class="cardInnerContainer">
+      <div class="headerContainer">
+        <div>
+          <i class="pi pi-tag product-category-icon"></i>
+          <span>{{product.category}}</span>
+        </div>
+        <span
+          [class]="'product-badge status-' + product.inventoryStatus?.toLowerCase()">{{product.inventoryStatus}}</span>
+      </div>
+      <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" class="productImage">
+      <h2 class="productName">{{product.name}}</h2>
+      <p class="productDescription"> {{product.description}}</p>
+      <p-rating class="productRating" [(ngModel)]="product.rating" [stars]='5' [readonly]="true"
+        [cancel]="false"></p-rating>
+      <div class="footerContainer">
+        <p class="priceText">{{product.price}}€</p>
+        <p-button icon="pi pi-shopping-cart" iconPos="left" (onClick)="onBuyClicked(product)"
+          [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+      </div>
+    </div>
+  </p-card>
+</div>
