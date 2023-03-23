@@ -62,12 +62,15 @@
 
     <section class="section7">
         <p-panel header="Ziel (Wird weiter ausgebaut, falls nachfrage am Kurs besteht)" [toggleable]="true">
-            <p>
+            <a routerLink="/shoppingList">
                 https://modernwebdevwithangular.web.app/
-            </p>
+            </a>
         </p-panel>
     </section>
 </div>
+
+<p-button label="Seite als word herunterladen" styleClass="p-button-raised p-button-text"  (onClick)="save()"></p-button>
+
 <div class="designedByFreepik">
     <br>
     <br>
