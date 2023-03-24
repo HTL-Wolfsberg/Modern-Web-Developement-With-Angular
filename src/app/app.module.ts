@@ -14,12 +14,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverviewComponent } from './components/overview/overview.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { PanelModule } from 'primeng/panel';
+import { MitarbeitskontrolleComponent } from './components/mitarbeitskontrolle/mitarbeitskontrolle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    MitarbeitskontrolleComponent
   ],
   imports: [
     BrowserModule,
